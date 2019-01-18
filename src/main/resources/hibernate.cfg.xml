@@ -14,7 +14,14 @@
 		
 		<property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
 		
+		<property name="hibernate.cache.provider_class">
+			org.hibernate.cache.EhCacheProvider
+		</property>
+		<property name="hibernate.cache.use_second_level">true</property>
+		<property name="net.sf.ehcache.configurationResourceName">ehcache.xml</property>
+		
 		<!-- <mapping resource="Artist.hbm.xml"/> -->
 		<mapping class="com.revature.Artist"/>
+		<mapping class="com.revature.Album"/>
 	</session-factory>
 </hibernate-configuration>
